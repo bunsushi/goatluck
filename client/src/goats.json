@@ -1,0 +1,26 @@
+[
+    {
+        "name": "goat-00",
+        "image": "/img/goat_00.jpg"
+    },
+    {
+        "name": "goat-01",
+        "image": "/img/goat_01.jpg"
+    },
+    {
+        "name": "goat-02",
+        "image": "/img/goat_02.png"
+    },
+    {
+        "name": "goat-03",
+        "image": "/img/goat_03.jpg"
+    },
+    {
+        "name": "goat-04",
+        "image": "/img/goat_04.jpg"
+    },
+    {
+        "name": "goat-05",
+        "image": "/img/goat_05.jpg"
+    }
+]

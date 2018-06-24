@@ -1,0 +1,14 @@
+.page-header {
+  background-color: orange;
+  text-align: center;
+  margin: 0 auto; }
+  .page-header h1 {
+    display: inline-block; }
+
+.img-container {
+  display: inline-block; }
+  .img-container img {
+    height: 200px;
+    display: inline-block; }
+
+/*# sourceMappingURL=style.css.map */
