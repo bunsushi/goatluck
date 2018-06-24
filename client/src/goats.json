@@ -22,5 +22,13 @@
     {
         "name": "goat-05",
         "image": "/img/goat_05.jpg"
+    },
+    {
+        "name": "goat-06",
+        "image": "/img/goat_06.jpg"
+    },
+    {
+        "name": "goat-07",
+        "image": "/img/goat_07.png"
     }
 ]
