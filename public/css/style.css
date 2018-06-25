@@ -58,7 +58,7 @@ h1 {
 
 .score {
   background-color: #5fd3bd;
-  color: #333;
+  color: #111;
   font-family: "Bangers", cursive;
   display: inline-block;
   transform: skew(-10deg); }
