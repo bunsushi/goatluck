@@ -1,11 +1,15 @@
 import React from "react";
 
-const Header = () => (
+const Header = props => (
     <div className="page-header">
-        <img src="img/happygoat.png" alt="Happy Goat"/>
+        <div className="goat-pen">
+            <img src="img/goat.png" alt="Happy Goat" />
+        </div>
+        <div id="word-bubble">
+        <h3>{props.message}</h3>
+        </div>
         <h1>Totes Ma Goats</h1>
-        <img src="img/happygoat.png" alt="Happy Goat"/>
-    </div>
+    </div >
 );
 
 export default Header;

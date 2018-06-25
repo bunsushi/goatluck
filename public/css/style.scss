@@ -1,28 +1,116 @@
+// VARIABLES
+$background: #111;
+$main-theme: #63d582;
+$main-accent: #5fd3bd;
+$second-theme: #8946d6;
+$second-accent: #542e8a;
+$snow: #fbfbfb;
+$header-font: 'Bangers', cursive;
+
+// BODY STYLES
+body {
+    background-color: $background;
+    color: $main-theme;
+    font-family: $header-font;
+    margin-top: 50px;
+}
+
+h1 {
+    font-family: $header-font;
+}
+
+.container-fluid {
+    padding: 0 5vw;
+}
+
+// HEADER STYLES
 .page-header {
-    background-color: orange;
+    color: $second-theme;
     text-align: center;
-    margin: 0 auto;
+
+    img {
+        width: 100%;
+        padding: 50px;
+    }
 
     h1 {
-        display: inline-block;
+        font-size: 5em;
+        padding: 40px 0 10px 0;
     }
 }
+
+.goat-pen {
+    width: 50%;
+    background-color: $second-accent;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#word-bubble {
+    display: inline-block;
+    position: relative;
+    background-color: $snow;
+    width: 35%;
+    margin-left: 5%;
+    padding: 50px;
+    border-radius: 35%;
+}
+
+#word-bubble:before {
+    content:"";
+    position: absolute;
+    top: 80%;
+    left: 30%;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-left: 20px solid $snow;
+    border-bottom: 70px solid transparent;
+    transform: rotate(45deg);
+ }
+
+
+// SCOREBOARD STYLES
+
+.score-box {
+    padding: 20px;
+    text-align: center;
+
+    h1 {
+        padding: 20px;
+    }
+
+    h2 {
+        display: inline-block;
+        padding-left: 20px;
+    }
+}
+
+.score {
+    background-color: $main-accent;
+    color: #333;
+    font-family: $header-font;
+    display: inline-block;
+    transform: skew(-10deg);
+
+}
+
+// PUZZLE BOARD STYLES
 
 .img-container {
     display: inline-block;
     width: 25%;
+    border: 10px solid transparent;
 
     img {
         width: 100%;
         display: inline-block;
+        border-radius: 10px
     }
 
     img:hover {
         cursor: pointer;
-        opacity: .8;
+        transform: rotate(-1deg) scale(1.1);
+        box-shadow: 5px 5px $snow;
     }
-}
-
-.puzzle-board {
-    border: 25px solid blue;
 }

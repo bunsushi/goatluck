@@ -1,21 +1,79 @@
+body {
+  background-color: #111;
+  color: #63d582;
+  font-family: "Bangers", cursive;
+  margin-top: 50px; }
+
+h1 {
+  font-family: "Bangers", cursive; }
+
+.container-fluid {
+  padding: 0 5vw; }
+
 .page-header {
-  background-color: orange;
-  text-align: center;
-  margin: 0 auto; }
+  color: #8946d6;
+  text-align: center; }
+  .page-header img {
+    width: 100%;
+    padding: 50px; }
   .page-header h1 {
-    display: inline-block; }
+    font-size: 5em;
+    padding: 40px 0 10px 0; }
+
+.goat-pen {
+  width: 50%;
+  background-color: #542e8a;
+  border-radius: 50%;
+  display: inline-block; }
+
+#word-bubble {
+  display: inline-block;
+  position: relative;
+  background-color: #fbfbfb;
+  width: 35%;
+  margin-left: 5%;
+  padding: 50px;
+  border-radius: 35%; }
+
+#word-bubble:before {
+  content: "";
+  position: absolute;
+  top: 80%;
+  left: 30%;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 20px solid #fbfbfb;
+  border-bottom: 70px solid transparent;
+  transform: rotate(45deg); }
+
+.score-box {
+  padding: 20px;
+  text-align: center; }
+  .score-box h1 {
+    padding: 20px; }
+  .score-box h2 {
+    display: inline-block;
+    padding-left: 20px; }
+
+.score {
+  background-color: #5fd3bd;
+  color: #333;
+  font-family: "Bangers", cursive;
+  display: inline-block;
+  transform: skew(-10deg); }
 
 .img-container {
   display: inline-block;
-  width: 25%; }
+  width: 25%;
+  border: 10px solid transparent; }
   .img-container img {
     width: 100%;
-    display: inline-block; }
+    display: inline-block;
+    border-radius: 10px; }
   .img-container img:hover {
     cursor: pointer;
-    opacity: .8; }
-
-.puzzle-board {
-  border: 25px solid blue; }
+    transform: rotate(-1deg) scale(1.1);
+    box-shadow: 5px 5px #fbfbfb; }
 
 /*# sourceMappingURL=style.css.map */

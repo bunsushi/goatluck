@@ -9,12 +9,14 @@ import goats from "./goats.json";
 
 class App extends Component {
   state = {
-    message: "You goat this! Click an image to begin!",
+    message: "Click a pic to begin!",
     highScore: 0,
     currentScore: 0,
     goats: goats,
     clicked: []
   }
+
+  audio = new Audio("goat-noise.mp3");
 
   componentDidMount = () => {
     console.log(this.state.clicked);
@@ -36,7 +38,7 @@ class App extends Component {
       // concatenate the id to the array of clicked image ids
       this.setState({ clicked: this.state.clicked.concat(id) });
     } else {
-      this.handleReset();
+      this.resetGame();
       this.shuffleArray(goats);
     }
   };
@@ -44,36 +46,49 @@ class App extends Component {
   incrementScore = () => {
     // increase current score by 1
     const newScore = this.state.currentScore + 1;
+    const goatPuns = ["You goat this!", "Lookin' goat!", "OMG(oat)!"];
+    const encouragement = goatPuns[Math.floor(Math.random() * goatPuns.length)];
     this.setState({
       currentScore: newScore,
-      message: "You goat this!"
+      message: encouragement
     });
+
     if (newScore >= this.state.highScore) {
       this.setState({ highScore: newScore });
     }
-    else if (newScore === 12) {
-      this.setState({ message: "You win!" });
+    if (newScore === 16) {
+      this.setState({ message: "You're the GOAT!" });
+      return;
     }
     this.shuffleArray(goats);
   };
 
-  handleReset = () => {
+  resetGame = () => {
     this.setState({
       currentScore: 0,
       highScore: this.state.highScore,
-      message: "Whoopsy daisy!",
+      message: "Whoopsie daisy!",
       clicked: []
     });
+    this.audio.play();
     this.shuffleArray(goats);
   };
 
   render() {
     return (
       <Wrapper>
-        <Header />
-        <Container>
+        <Container size="container-fluid">
           <Row>
-            <Column size="col-md-7">
+            <Column size="col-md-6">
+              <Header
+                message={this.state.message}
+              />
+              <ScoreBoard
+                currentScore={this.state.currentScore}
+                highScore={this.state.highScore}
+              />
+            </Column>
+            <Column size="col-md-6">
               <PuzzleBoard>
                 {
                   this.state.goats.map(goat => (
@@ -87,13 +102,6 @@ class App extends Component {
                   ))
                 }
               </PuzzleBoard>
-            </Column>
-            <Column size="col-md-5">
-              <ScoreBoard
-                message={this.state.message}
-                currentScore={this.state.currentScore}
-                highScore={this.state.highScore}
-              />
             </Column>
           </Row>
         </Container>
