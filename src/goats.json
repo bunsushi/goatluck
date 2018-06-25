@@ -1,0 +1,82 @@
+[
+    {
+        "id": 0,
+        "name": "goat-00",
+        "image": "/img/goat_00.jpg"
+    },
+    {
+        "id": 1,
+        "name": "goat-01",
+        "image": "/img/goat_01.jpg"
+    },
+    {
+        "id": 2,
+        "name": "goat-02",
+        "image": "/img/goat_02.png"
+    },
+    {
+        "id": 3,
+        "name": "goat-03",
+        "image": "/img/goat_03.jpg"
+    },
+    {
+        "id": 4,
+        "name": "goat-04",
+        "image": "/img/goat_04.jpg"
+    },
+    {
+        "id": 5,
+        "name": "goat-05",
+        "image": "/img/goat_05.jpg"
+    },
+    {
+        "id": 6,
+        "name": "goat-06",
+        "image": "/img/goat_06.jpg"
+    },
+    {
+        "id": 7,
+        "name": "goat-07",
+        "image": "/img/goat_07.png"
+    },
+    {
+        "id": 8,
+        "name": "goat-08",
+        "image": "/img/goat_08.jpg"
+    },
+    {
+        "id": 9,
+        "name": "goat-09",
+        "image": "/img/goat_09.jpg"
+    },
+    {
+        "id": 10,
+        "name": "goat-10",
+        "image": "/img/goat_10.jpg"
+    },
+    {
+        "id": 11,
+        "name": "goat-11",
+        "image": "/img/goat_11.jpg"
+    },
+    {
+        "id": 12,
+        "name": "goat-12",
+        "image": "/img/goat_12.png"
+    },
+    {
+        "id": 13,
+        "name": "goat-13",
+        "image": "/img/goat_13.jpg"
+    },
+    {
+        "id": 14,
+        "name": "goat-14",
+        "image": "/img/goat_14.jpg"
+    },
+    {
+        "id": 15,
+        "name": "goat-15",
+        "image": "/img/goat_15.jpg"
+    }
+]
