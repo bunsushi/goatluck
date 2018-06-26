@@ -46,32 +46,47 @@ class App extends Component {
   incrementScore = () => {
     // increase current score by 1
     const newScore = this.state.currentScore + 1;
-    const goatPuns = ["You goat this!", "Lookin' goat!", "OMG(oat)!"];
+    const goatPuns = ["You goat this!", "Lookin' goat!", "OMG(oat)!", "Way to goat!"];
     const encouragement = goatPuns[Math.floor(Math.random() * goatPuns.length)];
     this.setState({
       currentScore: newScore,
       message: encouragement
     });
+    console.log(this.state.clicked);
 
     if (newScore >= this.state.highScore) {
       this.setState({ highScore: newScore });
     }
     if (newScore === 16) {
-      this.setState({ message: "You're the GOAT!" });
-      return;
+      this.setState({
+        message: "You're the GOAT!",
+      });
     }
     this.shuffleArray(goats);
   };
 
   resetGame = () => {
-    this.setState({
-      currentScore: 0,
-      highScore: this.state.highScore,
-      message: "Whoopsie daisy!",
-      clicked: []
-    });
-    this.audio.play();
-    this.shuffleArray(goats);
+    // Win conditions
+    if (this.state.currentScore === 16) {
+      this.setState({
+        currentScore: 0,
+        highScore: this.state.highScore,
+        message: "Click a pic to begin!",
+        clicked: []
+      })
+      this.shuffleArray(goats);
+    }
+    // Loss conditions
+    else {
+      this.setState({
+        currentScore: 0,
+        highScore: this.state.highScore,
+        message: "Whoopsie daisy!",
+        clicked: []
+      });
+      this.audio.play();
+      this.shuffleArray(goats);
+    }
   };
 
   render() {
